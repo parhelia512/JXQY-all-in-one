@@ -15,12 +15,13 @@ int Game::run()
 	GameLog::write(u8"Game Run!\n");
 	GameLog::write(u8"Init Game Engine\n");
 	int w = DEFAULT_WINDOW_WIDTH, h = DEFAULT_WINDOW_HEIGHT;
+	Config::load();
 #ifdef __MOBILE__
-	w = 1000;
-	h = 500;
+	w = MOBILE_DEFAULT_WINDOW_WIDTH;
+	h = MOBILE_DEFAULT_WINDOW_HEIGHT;
 	Config::setDefaultWindowSize(w, h);
 #endif
-	Config::load();
+
 	if (Engine::getInstance() == nullptr) { return -1; }
 
 	Config::getWindowSize(w, h);

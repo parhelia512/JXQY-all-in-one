@@ -1,7 +1,7 @@
 cmake_minimum_required(VERSION 3.10)
 
 set(PROJECT_NAME "JXQY2")
-set(PROJECT_VERSION 1.4.2)
+set(PROJECT_VERSION 1.4.3)
 
 project(${PROJECT_NAME} VERSION ${PROJECT_VERSION})
 

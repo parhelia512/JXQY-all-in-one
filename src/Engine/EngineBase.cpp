@@ -203,9 +203,7 @@ void EngineBase::drawCursor()
 	{
 		if (hardwareCursor)
 		{
-#if !defined(__MOBILE__)
             SDL_SetCursor(cursorImage.image[frameIndex].frame.get());
-#endif // (defined _WIN32) || ((TARGET_OS_MAC == 1) && (TARGET_OS_IOS == 0))
 		}
 		else if (!softwareCursorHidden)
 		{

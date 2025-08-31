@@ -26,7 +26,6 @@ SDL、FMOD、FFMPEG等底层都封装在这里。
 #define SHF_USE_VIDEO
 #endif
 
-
 extern "C"
 {
 
@@ -56,10 +55,7 @@ extern "C"
 #include "minilzo.h"
 }
 
-#include "../File/File.h"
-#include "../libconvert/libconvert.h"
-#include "../Types/Types.h"
-#include "../File/log.h"
+#define __MOBILE__
 
 #if defined(__APPLE__) && (TARGET_OS_IOS)
 #ifndef __MOBILE__
@@ -72,6 +68,12 @@ extern "C"
 #define __MOBILE__
 #endif // !__MOBILE__
 #endif // __ANDROID__
+
+
+#include "../File/File.h"
+#include "../libconvert/libconvert.h"
+#include "../Types/Types.h"
+#include "../File/log.h"
 
 #ifdef _WIN32
 #ifdef _MSC_VER
