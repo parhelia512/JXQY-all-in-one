@@ -55,8 +55,6 @@ extern "C"
 #include "minilzo.h"
 }
 
-#define __MOBILE__
-
 #if defined(__APPLE__) && (TARGET_OS_IOS)
 #ifndef __MOBILE__
 #define __MOBILE__
